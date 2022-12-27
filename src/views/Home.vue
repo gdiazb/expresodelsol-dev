@@ -1,6 +1,5 @@
 <template lang="pug">
   <div class="es-home es-page">
-    <div class="widget" data-widgetid="EXPRESODELSOL" style="position: relative; width: 80%; margin:auto; "></div>
     .es-inner
       //- Banner slider
       BannerSlider
