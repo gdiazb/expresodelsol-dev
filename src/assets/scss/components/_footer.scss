@@ -1,0 +1,232 @@
+.es-footer {
+  padding-top: 50px;
+  border: 1px solid $c-border-light;
+  overflow-x: hidden;
+}
+.es-footer__grid {
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center);
+  @include flex-wrap(wrap);
+  font-family: 'Hind Madurai', sans-serif;
+  font-weight: 400;
+  @include font-rem(14px);
+  ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    color: $c-secondary;
+  }
+}
+
+  .es-footer__brand-logo {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .es-footer__social-txt {
+    text-align: center;
+    padding-right: 6px;
+  }
+
+  .es-footer__social,
+  .es-footer__social-list {
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+  }
+
+    .es-footer__social-link-hidden {
+      display: none;
+    }
+
+    .es-footer__social-item {
+      margin: 0 6px;
+    }
+
+    .es-footer__social-link {
+      &:before {
+        @include font-rem(22px);
+        color: $c-primary;
+      }
+    }
+
+    .es-footer__title {
+      margin-bottom: 10px;
+      text-align: center;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 500;
+      @include font-rem(16px);
+    }
+
+  .es-footer__company-item {
+    margin-right: 20px;
+  } 
+
+  .es-footer__company-list {
+    @include flexbox;
+    @include flex-wrap(wrap);
+    @include justify-content(center);
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+    .es-footer__company-link,
+    .es-footer__contact-link {
+      text-decoration: none;
+      @include flexbox;
+      @include align-items(center);
+      margin: 5px 0;
+    }
+    
+    .es-footer__company-link {
+      &:before {
+        @include font-rem(12px);
+        display: block;
+        margin-right: 12px;
+      }
+    }
+  .es-footer__company,
+  .es-footer__contact {
+    padding: 0 10px;
+  }
+
+    .es-footer__contact-link {
+      @include justify-content(center);
+      &:before {
+        @include font-rem(18px);
+        display: block;
+        margin-right: 12px;
+      }
+    }
+
+    .es-footer__contact-link-txt {
+      margin: 5px 0;
+      text-align: center;
+    }
+  .es-footer__legal {
+    width: 100%;
+  }
+
+    .es-footer__legal-logo {
+      display: block;
+      width: 100%;
+      margin: 16px auto;
+    }
+    
+    .es-footer__legal-logo-1 {
+      width: 84px;
+    }
+    
+    .es-footer__legal-logo-2 {
+      width: 228px;
+    }
+  .es-footer__copyright {
+    position: relative;
+    background-color: $c-brand;
+    padding: 18px 0;
+    text-align: center;
+    &:before {
+      content: '';
+      display: block;
+      position: relative;
+      width: 36px;
+      height: 20px;
+      top: -19px;
+      position: absolute;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-image: url('#{$img-path}/bus.svg');
+      animation: mymove 10s infinite;
+      animation-timing-function: linear;
+    }
+    
+    @keyframes mymove {
+      from {
+        left: -6%;
+      }
+      to {
+        left: 105%;
+      }
+    }
+    
+  }
+  .es-footer__copyright-txt {
+    @include font-rem(14px);
+    margin: 0;
+    font-family: 'Hind Madurai', sans-serif;
+    font-weight: 400;
+  }
+
+  .es-footer__brand,
+  .es-footer__contact,
+  .es-footer__company,
+  .es-footer__legal {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .es-footer__contact-list {
+    .es-footer__contact-item {
+      &:last-child {
+        .es-footer__contact-link {
+          color: $c-primary;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+@include media-query(medium) {
+  .es-footer__grid {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px 66px;
+    padding-bottom: 66px;
+  }
+    .es-footer__social-link {
+      &:before {
+        @include font-rem(24px);
+      }
+    }
+  .es-footer__copyright {
+    &:before {
+      height: 39px;
+      width: 67px;
+      top: -39px;
+    }
+  }
+}
+  
+@include media-query(wide) {
+  .es-footer__brand,
+  .es-footer__contact,
+  .es-footer__company,
+  .es-footer__legal {
+    width: auto;
+  }
+  .es-footer__grid {
+    @include justify-content(space-between);
+  }
+  .es-footer__contact-link {
+    @include justify-content(flex-start);
+  }
+  .es-footer__title {
+    text-align: left;
+  }
+  .es-footer__contact-link-txt {
+    text-align: left;
+  }
+  .es-footer__company-list  {
+    display: block;
+  }
+  .es-footer__company-list {
+    display: block;
+  }
+  .es-footer__company-item {
+    margin-right: 0;
+  }
+}

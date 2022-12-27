@@ -1,0 +1,20 @@
+/*------------------------------------*\
+  Transversal Elements
+  #Styles for layout
+\*------------------------------------*/
+
+.es-list-general {
+  padding: 0 0 20px 22px;
+}
+
+.es-list-general__item {
+  line-height: 1.6;
+  @include font-rem(16px);
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+@include media-query(wide) {
+  .es-list-general__item {
+    @include font-rem(18px);
+  }
+}

@@ -1,0 +1,38 @@
+
+//Bnner Main
+
+.es-banner-main {
+  position: relative;
+}
+
+.es-banner-main__header {
+  position: absolute;
+  text-align: center;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .es-title {
+    color: $c-primary;
+  }
+}
+
+  .es-banner-main__title {
+    @include font-rem(32px);
+  }
+
+  .es-banner-main__img {
+    display: block;
+    width: 100%;
+  }
+@include media-query(wide) {
+  .es-banner-main__title {
+    @include font-rem(50px);
+  }
+  .es-banner-main__wrapper-img {
+    display: block;
+    height: 400px;
+    overflow: hidden;
+  }
+}
+

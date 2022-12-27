@@ -1,0 +1,10 @@
+.es-services__comfort {
+	padding: 30px 0;  
+  background-color: $c-gray-bg;
+}
+
+@include media-query(wide) {
+	.es-services__comfort {
+		padding: 50px 0;
+	}
+}

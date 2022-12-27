@@ -1,0 +1,42 @@
+
+.es-message {
+  text-align: center;
+  padding-bottom: 50px;
+  @include media-query(medium) {
+    padding-bottom: 90px;
+  }
+  .es-lead {
+    padding-bottom: 12px;
+  }
+}
+
+.es-message__header {
+  padding-bottom: 0;
+}
+.es-message__content {
+  width: 90%;
+  margin: 0 auto;
+  @include media-query(medium) {
+    max-width: 400px;
+  }
+}
+
+.es-lead_strong  {
+  @include font-rem(34px);
+  color: $c-secondary;
+  
+}
+
+.es-message__txt,
+.es-message__txt_highlight {
+  font-family: 'nunito_sansblack';
+}
+
+.es-message__txt_highlight {
+  color: $c-primary;
+  padding-bottom: 20px;
+}
+
+.es-message__btn {
+  margin: 0 auto;
+}

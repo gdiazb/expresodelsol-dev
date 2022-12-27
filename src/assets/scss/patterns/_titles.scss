@@ -1,0 +1,99 @@
+/*------------------------------------*\
+    Transversal Elements
+    #Styles for Titles
+\*------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+.es-title {
+  display: inline;
+  background-color: $c-neutro;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  padding: 0 6px;
+}
+
+.es-subtitle {
+  position: relative;
+  margin-bottom: 34px;
+  padding-left: 0;
+  @include font-rem(24px);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  &:before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 4px;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    background-color: $c-primary;
+  }
+  &.es-subtitle_center {
+    text-align: center;
+  }
+}
+
+.es-subsubtitle {
+  font-family: 'Hind Madurai', sans-serif;
+  font-weight: 600;
+  @include font-rem(18px);
+  margin-bottom: 10px;
+}
+
+.es-txt {
+  display: block;
+  // max-width: 900px;
+  // margin: 0 auto;
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.6;
+  @include font-rem(16px);
+  &.es-txt_center {
+    text-align: center;
+  }
+  // &.es-txt {
+  //   @include font-rem(14px);
+  // }
+}
+
+.es-small {
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  @include font-rem(12px);
+  text-align: right;
+  display: block;
+} 
+
+@include media-query(wide) {
+  .es-subtitle {
+    padding-left: 14px;
+    text-align: left;
+    @include font-rem(30px);
+    &:not(.es-subtitle_center) {
+      &:before {
+        width: 4px;
+        height: 80%;
+        left: 0;
+        top: 50%;
+        transform: translate(0 , -50%);
+        bottom: initial;
+      }
+    }
+  }
+  .es-subsubtitle {
+    @include font-rem(24px);
+  }  
+  .es-txt {
+    @include font-rem(18px);
+  }
+}

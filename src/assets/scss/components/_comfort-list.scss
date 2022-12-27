@@ -1,0 +1,89 @@
+.es-comfort-list {
+  @include flexbox;
+  @include flex-wrap(wrap);
+  @include justify-content(center);
+  list-style: none;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.es-comfort-list-item {
+  position: relative;
+  @include flexbox;
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+  @include flex(0 0 auto);
+  margin: 10px 20px;
+  width: 60px;
+  padding-top: 60px;
+  &:before {
+    position: absolute;
+    z-index: 2;
+    top: 12px;
+    @include font-rem(35px);
+  }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    top: 0;
+    border-radius: 50%;
+    box-shadow: 0px 2px 6px rgba(51, 51, 51, 0.1);
+    background-color: $c-neutro;
+  }
+}
+
+.es-comfort-list-label {
+  text-align: center;
+  @include font-rem(12px);
+  font-family: 'Hind Madurai', sans-serif;
+  margin-bottom: 0;
+}
+
+.es-comfort-list_home {
+  .es-comfort-list-label {
+    @include font-rem(16px);
+  }
+  .es-comfort-list-item {
+    width: 80px;
+  }
+}
+
+@include media-query(wide) {
+  .es-comfort-list-item {
+    width: 90px;
+    padding-top: 90px;
+    margin: 20px 30px;
+    &:before {
+      top: 20px;
+      @include font-rem(50px);
+    }
+    &:after {
+      width: 90px;
+      height: 90px;
+    }
+  }
+  .es-comfort-list-label {
+    @include font-rem(14px);
+  }
+  .es-comfort-list_home {
+    .es-comfort-list-label {
+      @include font-rem(18px);
+      margin-top: 30px;
+    }
+    .es-comfort-list-item {
+      margin: 20px 40px;
+      &:after {
+        width: 110px;
+        height: 110px;
+      }
+      &:before {
+        top: 26px;
+        @include font-rem(60px);
+      }
+    }
+  }
+}

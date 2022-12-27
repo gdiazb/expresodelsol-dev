@@ -1,0 +1,145 @@
+
+//Bnner Slider
+
+.es-banner-slider {
+  position: relative;
+}
+
+.es-banner-slider__header {
+  position: absolute;
+  text-align: right;
+  z-index: 2;
+  top: 30px;
+  right: 30px;
+}
+
+.es-banner-slider__title {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  .es-title {
+    color: $c-primary;
+    font-weight: 700;
+    @include font-rem(32px);
+    padding: 0 6px;
+  }
+}
+
+.es-banner-slider__slogan {
+  display: block;
+  .es-title {
+    @include font-rem(20px);
+  }
+}
+
+//Slider
+.es-slider {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  .slick-arrow {
+    font-size: 0px;
+    position: absolute;
+    bottom: 30px;
+    z-index: 2;
+    &:before {
+      color: $c-neutro;
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: $ico-font-family !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  }
+  .slick-prev,
+  .slick-next {
+    &:before {
+      display: block;
+      @include font-rem(16px);
+    }
+  }
+  .slick-prev {
+    left: 26px;
+    &:before {
+      content: $i-arrow-left;
+    }
+  }
+  .slick-next {
+    left: 132px;
+    &:before {
+      content: $i-arrow-right;
+    }
+  }
+  .slick-dots {
+    position: absolute;
+    list-style: none;
+    font-size: 0px;
+    @include flexbox;
+    z-index: 2;
+    bottom: 32px;
+    left: 54px;
+    button {
+      position: relative;
+      display: block;
+      margin: 0 6px;
+      padding: 0;
+      &:before {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        background-color: $c-neutro;
+        border-radius: 50%;
+      }
+    }
+    .slick-active {
+      button {
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          border: 1px solid $c-neutro;
+          border-radius: 50%;
+          bottom: -5px;
+          left: -5px;
+
+        }
+      }
+    }
+  }
+}
+
+@include media-query(wide) {
+  .es-slider {
+    .slick-arrow {
+      bottom: 40px;
+    }
+    .slick-dots {
+      bottom: 43px;
+    }
+  }
+  .es-banner-slider__header {
+    top: 100px;
+    right: 70px;
+  }
+  .es-banner-slider__title {
+    .es-title {
+      @include font-rem(50px);
+    }
+  }
+  .es-banner-slider__slogan {
+    .es-title {
+      @include font-rem(28px);
+    }
+  }
+}

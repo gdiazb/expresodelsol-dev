@@ -1,0 +1,40 @@
+.es-contact {
+  text-align: center;
+  .es-btn {
+    margin-top: 30px;
+  }
+}
+
+.es-contact__list {
+  color: $c-secondary;
+  font-family: 'Hind Madurai', sans-serif;
+  font-weight: 600;
+  padding-bottom: 12px;
+}
+.es-contact__term,
+.es-contact__def {
+  display: block;
+}
+.es-contact__def {
+  padding-bottom: 10px;
+  .es-contact__link {
+    line-height: 1.4;
+    display: block;
+  }
+}
+
+  .es-contact__term {
+    padding: 0 6px;
+    font-weight: 600;
+  }
+
+  .es-contact__link {
+    color: $c-secondary;
+    font-weight: 400;
+  }
+
+@include media-query(wide) {
+  .es-contact__list {
+    @include font-rem(20px);
+  }
+}

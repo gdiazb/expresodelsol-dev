@@ -1,0 +1,29 @@
+/*------------------------------------*\
+  Transversal Elements
+  #Styles for layout
+\*------------------------------------*/
+
+.es-inner {
+  width: 96%;
+  max-width: 1440px;
+  margin: 0 auto 50px;
+}
+
+.es-page {
+  padding-top: 60px;
+}
+
+.es-intro {
+  max-width: 1100px;
+  margin: initial auto;
+}
+
+@include media-query(full) {
+  .es-inner {
+    width: 90%;
+    margin-bottom: 70px;
+  }
+  .es-page {
+    padding-top: 80px;
+  }
+}

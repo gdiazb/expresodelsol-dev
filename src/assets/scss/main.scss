@@ -1,0 +1,43 @@
+@import
+  'utils/variables/var-path',
+  'utils/variables/var-color',
+  'utils/variables/var-typo',
+  'utils/variables/var-breakpoint';
+
+@import
+  'utils/mix/mix-flex',
+  'utils/mix/mix-font-rem',
+  'utils/mix/mix-mediaquery';
+
+@import
+  'generic/normalize',
+  'generic/font-face';
+
+@import
+  'patterns/buttons',
+  'patterns/layout',
+  'patterns/titles',
+  'patterns/list';
+
+
+@import
+
+  'components/navigation',
+  'components/footer',
+  'components/home',
+  'components/_banner-slider',
+  'components/futured-slider',
+  'components/grid-duo',
+  'components/banner-main',
+  'components/grid-aside',
+  'components/comfort-list',
+  'components/services',
+  'components/tabs',
+  'components/accordion',
+  'components/contact',
+  'components/vertical-tabs',
+  'components/rutas',
+  'components/preload',
+  'components/about';
+@import
+  'blocks/grid';

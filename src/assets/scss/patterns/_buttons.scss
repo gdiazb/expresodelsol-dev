@@ -1,0 +1,210 @@
+/*------------------------------------*\
+  Transversal Elements
+  #Styles for botones
+\*------------------------------------*/
+
+button {
+  line-height: inherit;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: none;
+  outline: none;
+  outline-width: 0;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  &:focus {
+    outline-width: 0;
+  }
+  &:disabled {
+    cursor: default;
+  }
+}
+
+
+.es-btn {
+  position: relative;
+  display: inline-block;
+  padding: 16px 18px;
+  min-width: 260px;
+  line-height: 1;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: $c-neutro;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  @include font-rem(16px);
+  font-weight: $f-bold;
+  border-radius: 4px;
+  transition: all .2s linear;
+  &:hover,
+  &:focus{
+    border-color: $c-primary;
+  }
+  &:before {
+    @include font-rem(16px);
+    margin-right: 10px;
+  }
+}
+.es-btn_primary {
+  border: 1px solid $c-primary;
+  background-color: $c-primary;
+  &:hover,
+  &:focus{
+    background-color: #c63338;
+  }
+}
+.es-btn_secondary {
+  border: 1px solid $c-primary;
+  color: $c-primary;
+  background-color: $c-neutro;
+  &:hover,
+  &:focus{
+    color: $c-neutro;
+    background-color: $c-primary;
+  }
+}
+.es-btn_whatsapp,
+.es-btn_redbus {
+  @include inline-flex;
+  @include align-items(center);
+  height: 48px;
+  color: $c-neutro;
+  &:before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+  }
+}
+
+.es-btn_whatsapp {
+  background-color: $c-whatsapp;
+  &:before {
+    background-image: url('#{$img-path}/logo-whatsapp.png');
+  }
+}
+
+.es-btn_redbus {
+  background-color: $c-primary;
+  &:before {
+    background-image: url('#{$img-path}/logo-redbus.png');
+  }
+}
+
+.es-nav-actions {
+  @include flexbox;
+  @include justify-content(center);
+  @include flex-wrap(wrap);
+  padding-top: 30px;
+  .es-btn {
+    margin: 10px;
+  }
+}
+
+.es-btn-fixed_whatsapp {
+  position: fixed;
+  width: 40px;
+  @include flexbox;
+  @include align-items(center);
+  height: 40px;
+  bottom: 50px;
+  right: 0;
+  margin: 0 30px 0 auto;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+  text-decoration: none;
+  z-index: 2;
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    background-image: url('#{$img-path}/logo-whatsapp.png');
+  }
+  span {
+    font-size: 12px;
+    background: transparent;
+    text-decoration: none;
+    padding: 10px 10px 10px 50px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Hind Madurai', sans-serif;
+    transition: all .3s linear;
+  }
+  &:hover {
+    width: 150px;
+    span {
+      color: #111;
+      background: #fff;
+      -webkit-box-shadow: 0 0 10px #c5c0c0;
+      box-shadow: 0 0 10px #c5c0c0;
+    }
+  }
+}
+
+.es-btn-fixed_redbus {
+  position: fixed;
+  right: -6px;
+  bottom: 100px;
+  z-index: 2;
+  @include flexbox;
+  @include align-items(center);
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  margin: 0 30px 0 auto;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #c5c0c0;
+  &:hover {
+    .es-btn-fixed_redbus-txt {
+      background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+      background-color:#c62d1f;
+    }
+  }
+  .es-btn-fixed_redbus-txt {
+    @include flexbox;
+    @include align-items(center);
+    height: 100%;
+    padding: 4px;
+    line-height: 1;
+    color: $c-neutro;
+    font-family: 'Hind Madurai', sans-serif;
+    font-weight: 600;
+    @include font-rem(9px);
+    text-align: center;
+    text-shadow:0px 1px 0px #810e05;
+    background-color:#f24537;
+    background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+    border:2px solid #d02718;
+    border-radius: 50%;
+    box-shadow:inset 0px 1px 0px 0px #f5978e;
+    transition: all .3s linear;
+  }
+}
+
+        
+
+@include media-query(wide) {
+  .es-nav-actions {
+    .es-btn {
+      margin: 0 10px;
+    }
+  }
+}

@@ -1,0 +1,130 @@
+
+.es-slider-futured {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1280px;
+  text-align: center;
+  .slick-slide {
+    div {
+      width: 100%;
+    }
+  }
+  p {
+    margin: 0;
+  }
+  .slick-arrow {
+    font-size: 0px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    &:before {
+      display: block;
+      color: $c-secondary;
+      @include font-rem(18px);
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: $ico-font-family !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  }
+  .slick-prev {
+    left: -12px;
+    &:before {
+      content: $i-arrow-left;
+    }
+  }
+  .slick-next {
+    right: -14px;
+    &:before {
+      content: $i-arrow-right;
+    }
+  }
+  .slick-dots {
+    padding-top: 20px;
+    list-style: none;
+    font-size: 0px;
+    @include flexbox;
+    @include justify-content(center);
+    z-index: 2;
+    button {
+      position: relative;
+      display: block;
+      margin: 0 6px;
+      padding: 0;
+      &:before {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        background-color: $c-primary;
+        border-radius: 50%;
+      }
+    }
+    .slick-active {
+      button {
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 14px;
+          height: 14px;
+          border: 1px solid $c-primary;
+          border-radius: 50%;
+          bottom: -4px;
+          left: -4px;
+        }
+      }
+    }
+  }
+}
+.es-slider__img {
+  width: 100%;
+}
+
+.es-slider-futured__card {
+  display: block!important;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 290px;
+  padding: 10px;
+}
+
+  .es-slider-futured__caption {
+    padding: 2px 0 6px;
+    background-color: $c-brand;
+  }
+
+  .es-slider-futured__img {
+    display: block;
+    width: 100%;
+  }
+  
+  .es-slider-futured__title,
+  .es-slider-futured__subtitle {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+  }
+
+  .es-slider-futured__title {
+    @include font-rem(20px);
+    line-height: 1.4;
+  }
+  .es-slider-futured__subtitle {
+    @include font-rem(12px);
+  }
+
+@include media-query(big) {
+  .es-slider-futured {
+    padding: 0 20px;
+  } 
+}
