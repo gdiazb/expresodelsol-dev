@@ -7,7 +7,7 @@ npm run build
 cd dist
 
 git init
-git add -add
+git add -A
 git commit -m 'New deployment'
 git push -f git@github.com:gdiazb/expresodelsol-dev.git main:gh-pages
 
