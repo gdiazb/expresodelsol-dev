@@ -6,7 +6,7 @@
     a.es-btn-fixed_whatsapp(href="https://wa.me/573165016613?text=Hola+Expreso+del+Sol%2C+me+gustar%C3%ADa+recibir+informaci%C3%B3n" target="_blank")
       span Escribenos por <br>WhatsApp
     a.es-btn-fixed_redbus(href="https://www.redbus.co/viajes/pasajes-de-bus-expreso-del-sol" target="_blank")
-      span.es-btn-fixed_redbus-txt Adquiere tus tiquetes
+      span.es-btn-fixed_redbus-txt Adquiere tus tiquetes test
     <router-view/>
     Footer
   </div>
